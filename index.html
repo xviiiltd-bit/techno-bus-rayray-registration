@@ -108,14 +108,6 @@ img {
 .eyebrow,
 .section-heading p,
 .partners > span,
-.notice-box span {
-  margin: 0;
-  color: var(--acid);
-  font-size: clamp(0.78rem, 1.6vw, 0.95rem);
-  letter-spacing: 0;
-  text-transform: uppercase;
-}
-
 h1,
 h2 {
   margin: 0;
@@ -149,7 +141,6 @@ h1 {
 .quick-facts div,
 .event-panel,
 .register-panel,
-.notice-box,
 .bank-transfer,
 .notice-section,
 .payment-modal__panel {
@@ -330,17 +321,17 @@ h1 {
   color: var(--acid);
 }
 
-.notice-box {
-  margin: 28px 0;
-  padding: 18px;
-  background: var(--acid-soft);
-}
-
-.notice-box p,
 .bank-transfer p {
   margin: 10px 0 0;
   color: var(--text);
   line-height: 1.7;
+}
+
+.registration-payment-note {
+  margin: -2px 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.6;
 }
 
 .partners,
@@ -728,13 +719,6 @@ h1 {
               <a class="social-icon" href="https://www.instagram.com/djrayraytaiwan/" target="_blank" rel="noreferrer" aria-label="RAYRAY Instagram">IG</a>
             </li>
           </ol>
-
-          <div class="notice-box">
-            <span>PAYMENT</span>
-            <p>
-              填寫報名資料後點擊付款，系統會顯示銀行轉帳資訊，並請留下匯款帳號後 5 碼。
-            </p>
-          </div>
         </div>
 
         <section class="register-panel" id="register" aria-labelledby="form-title">
@@ -779,6 +763,9 @@ h1 {
             <button class="submit-button" type="submit">
               付款
             </button>
+            <p class="registration-payment-note">
+              填寫報名資料後點擊付款，系統會顯示銀行轉帳資訊，並請留下匯款帳號後 5 碼
+            </p>
           </form>
 
           <div class="form-status" id="form-status" role="status" aria-live="polite"></div>

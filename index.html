@@ -150,7 +150,6 @@ h1 {
 .event-panel,
 .register-panel,
 .notice-box,
-.follow-panel,
 .bank-transfer,
 .notice-section,
 .payment-modal__panel {
@@ -216,14 +215,13 @@ h1 {
 
 .content-grid {
   display: grid;
-  grid-template-columns: minmax(280px, 0.92fr) minmax(180px, 0.46fr) minmax(320px, 1.1fr);
+  grid-template-columns: minmax(280px, 0.9fr) minmax(320px, 1.1fr);
   gap: 24px;
   padding-top: 32px;
 }
 
 .event-panel,
-.register-panel,
-.follow-panel {
+.register-panel {
   padding: clamp(20px, 4vw, 34px);
 }
 
@@ -295,14 +293,16 @@ h1 {
 }
 
 .follow-panel {
-  align-self: start;
+  margin: -6px 0 24px;
   display: grid;
-  gap: 18px;
+  gap: 12px;
 }
 
 .follow-panel div {
-  display: grid;
-  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
 }
 
 .follow-panel span {
@@ -315,13 +315,13 @@ h1 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 40px;
+  min-height: 36px;
   border: 1px solid rgba(139, 255, 47, 0.5);
   color: var(--text);
   text-decoration: none;
   text-align: center;
-  padding: 8px 10px;
-  font-size: 0.82rem;
+  padding: 7px 10px;
+  font-size: 0.78rem;
   font-weight: 800;
 }
 
@@ -682,6 +682,20 @@ h1 {
             </div>
           </div>
 
+          <section class="follow-panel" aria-label="追蹤按鈕">
+            <div>
+              <span>IG</span>
+              <a href="https://www.instagram.com/techno.bus.tw/" target="_blank" rel="noreferrer">techno.bus.tw</a>
+              <a href="https://www.instagram.com/nextstopstudio_tw/" target="_blank" rel="noreferrer">nextstopstudio_tw</a>
+              <a href="https://www.instagram.com/deepsound_tp/" target="_blank" rel="noreferrer">deepsound_tp</a>
+            </div>
+            <div>
+              <span>YT</span>
+              <a href="https://youtube.com/@nextstopstudio_tw" target="_blank" rel="noreferrer">NextStopStudio_TW</a>
+              <a href="https://www.youtube.com/@djrayraytaiwan" target="_blank" rel="noreferrer">RayRay</a>
+            </div>
+          </section>
+
           <a class="hero__cta" href="#register">立即報名</a>
         </div>
       </section>
@@ -722,20 +736,6 @@ h1 {
             </p>
           </div>
         </div>
-
-        <section class="follow-panel" aria-label="追蹤按鈕">
-          <div>
-            <span>IG</span>
-            <a href="https://www.instagram.com/techno.bus.tw/" target="_blank" rel="noreferrer">techno.bus.tw</a>
-            <a href="https://www.instagram.com/nextstopstudio_tw/" target="_blank" rel="noreferrer">nextstopstudio_tw</a>
-            <a href="https://www.instagram.com/deepsound_tp/" target="_blank" rel="noreferrer">deepsound_tp</a>
-          </div>
-          <div>
-            <span>YT</span>
-            <a href="https://youtube.com/@nextstopstudio_tw" target="_blank" rel="noreferrer">NextStopStudio_TW</a>
-            <a href="https://www.youtube.com/@djrayraytaiwan" target="_blank" rel="noreferrer">RayRay</a>
-          </div>
-        </section>
 
         <section class="register-panel" id="register" aria-labelledby="form-title">
           <div class="section-heading">

@@ -954,7 +954,7 @@ paymentForm.addEventListener("submit", async (event) => {
     ...pendingPayload,
     transferLast5: last5Input.value.trim(),
     submittedAt: new Date().toISOString(),
-    paymentStatus: "已填後五碼待對帳",
+    paymentStatus: last5Input.value.trim(),
   };
 
   submitButton.disabled = true;

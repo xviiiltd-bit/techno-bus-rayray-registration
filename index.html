@@ -150,6 +150,7 @@ h1 {
 .event-panel,
 .register-panel,
 .notice-box,
+.follow-panel,
 .bank-transfer,
 .notice-section,
 .payment-modal__panel {
@@ -215,13 +216,14 @@ h1 {
 
 .content-grid {
   display: grid;
-  grid-template-columns: minmax(280px, 0.9fr) minmax(320px, 1.1fr);
+  grid-template-columns: minmax(280px, 0.92fr) minmax(180px, 0.46fr) minmax(320px, 1.1fr);
   gap: 24px;
   padding-top: 32px;
 }
 
 .event-panel,
-.register-panel {
+.register-panel,
+.follow-panel {
   padding: clamp(20px, 4vw, 34px);
 }
 
@@ -254,7 +256,7 @@ h1 {
 
 .lineup-list li {
   display: grid;
-  grid-template-columns: 150px 1fr;
+  grid-template-columns: 150px 1fr auto;
   gap: 12px;
   align-items: center;
   min-height: 48px;
@@ -270,6 +272,62 @@ h1 {
   color: var(--text);
   font-size: 1.3rem;
   font-weight: 800;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(139, 255, 47, 0.72);
+  border-radius: 50%;
+  color: var(--acid);
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  background: var(--acid);
+  color: #071004;
+  box-shadow: 0 0 22px rgba(139, 255, 47, 0.28);
+}
+
+.follow-panel {
+  align-self: start;
+  display: grid;
+  gap: 18px;
+}
+
+.follow-panel div {
+  display: grid;
+  gap: 10px;
+}
+
+.follow-panel span {
+  color: var(--acid);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.follow-panel a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  border: 1px solid rgba(139, 255, 47, 0.5);
+  color: var(--text);
+  text-decoration: none;
+  text-align: center;
+  padding: 8px 10px;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.follow-panel a:hover {
+  border-color: var(--acid);
+  color: var(--acid);
 }
 
 .notice-box {
@@ -416,7 +474,7 @@ h1 {
 }
 
 .notice-section {
-  font-size: 10pt;
+  font-size: 7pt;
 }
 
 .notice-section .section-heading p,
@@ -427,8 +485,8 @@ h1 {
 
 .notice-columns {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 22px;
+  grid-template-columns: 1fr;
+  gap: 12px;
 }
 
 .notice-columns ul {
@@ -566,13 +624,13 @@ h1 {
 
 @media (max-width: 560px) {
   h1 {
-    font-size: 24pt;
+    font-size: 30pt;
   }
 }
 
 @media (max-width: 420px) {
   h1 {
-    font-size: 21pt;
+    font-size: 30pt;
   }
 
   .event-panel,
@@ -631,16 +689,30 @@ h1 {
       <section class="content-grid" aria-label="活動資訊與報名表單">
         <div class="event-panel">
           <div class="section-heading">
-            <p>LINEUP</p>
-            <h2>Recording Schedule</h2>
+            <h2>LINEUP</h2>
           </div>
 
           <ol class="lineup-list">
-            <li><time>21:00 - 22:00</time><span>TUZI (SPECIAL GUEST)</span></li>
-            <li><time>22:00 - 23:00</time><span>NITTA</span></li>
-            <li><time>23:00 - 00:00</time><span>TAISA</span></li>
-            <li><time>00:00 - 01:00</time><span>VICKY</span></li>
-            <li><time>01:00 - 02:00</time><span>RAYRAY</span></li>
+            <li>
+              <time>21:00 - 22:00</time>
+              <span>TUZI (SPECIAL GUEST)</span>
+              <a class="social-icon" href="https://www.instagram.com/tuzi.mp3/" target="_blank" rel="noreferrer" aria-label="TUZI Instagram">IG</a>
+            </li>
+            <li>
+              <time>22:00 - 23:00</time>
+              <span>TAISA</span>
+              <a class="social-icon" href="https://www.instagram.com/dj.tasia/" target="_blank" rel="noreferrer" aria-label="TAISA Instagram">IG</a>
+            </li>
+            <li>
+              <time>23:00 - 00:00</time>
+              <span>NITTA</span>
+              <a class="social-icon" href="https://www.instagram.com/nitta.dj/" target="_blank" rel="noreferrer" aria-label="NITTA Instagram">IG</a>
+            </li>
+            <li>
+              <time>01:00 - 02:00</time>
+              <span>RAYRAY</span>
+              <a class="social-icon" href="https://www.instagram.com/djrayraytaiwan/" target="_blank" rel="noreferrer" aria-label="RAYRAY Instagram">IG</a>
+            </li>
           </ol>
 
           <div class="notice-box">
@@ -650,6 +722,20 @@ h1 {
             </p>
           </div>
         </div>
+
+        <section class="follow-panel" aria-label="追蹤按鈕">
+          <div>
+            <span>IG</span>
+            <a href="https://www.instagram.com/techno.bus.tw/" target="_blank" rel="noreferrer">techno.bus.tw</a>
+            <a href="https://www.instagram.com/nextstopstudio_tw/" target="_blank" rel="noreferrer">nextstopstudio_tw</a>
+            <a href="https://www.instagram.com/deepsound_tp/" target="_blank" rel="noreferrer">deepsound_tp</a>
+          </div>
+          <div>
+            <span>YT</span>
+            <a href="https://youtube.com/@nextstopstudio_tw" target="_blank" rel="noreferrer">NextStopStudio_TW</a>
+            <a href="https://www.youtube.com/@djrayraytaiwan" target="_blank" rel="noreferrer">RayRay</a>
+          </div>
+        </section>
 
         <section class="register-panel" id="register" aria-labelledby="form-title">
           <div class="section-heading">
@@ -720,8 +806,8 @@ h1 {
         </div>
         <p class="contact-line">
           CONTACT 聯繫方式:
-          <a href="https://www.instagram.com/techno.bus.tw/" target="_blank" rel="noreferrer">
-            Techno Bus Tw
+          <a href="https://www.instagram.com/techno.bus.tw/#" target="_blank" rel="noreferrer">
+            techno.bus.tw
           </a>
         </p>
       </section>

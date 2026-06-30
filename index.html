@@ -815,6 +815,11 @@ h1 {
             </label>
 
             <label>
+              <span data-i18n="emailLabel">Email</span>
+              <input name="email" type="email" autocomplete="email" required />
+            </label>
+
+            <label>
               <span data-i18n="birthdayLabel">生日</span>
               <input name="birthday" type="date" required />
             </label>
@@ -956,6 +961,7 @@ const translations = {
     formTitle: "活動報名資訊",
     nameLabel: "姓名",
     phoneLabel: "電話",
+    emailLabel: "Email",
     birthdayLabel: "生日",
     instagramLabel: "Instagram 帳號",
     paymentButton: "付款",
@@ -993,6 +999,7 @@ const translations = {
     formTitle: "Registration Info",
     nameLabel: "Name",
     phoneLabel: "Phone",
+    emailLabel: "Email",
     birthdayLabel: "Birthday",
     instagramLabel: "Instagram Account",
     paymentButton: "Payment",
@@ -1092,6 +1099,7 @@ form.addEventListener("submit", async (event) => {
     ...eventMeta,
     name: String(formData.get("name") || "").trim(),
     phone: String(formData.get("phone") || "").trim(),
+    email: String(formData.get("email") || "").trim(),
     birthday: String(formData.get("birthday") || "").trim(),
     instagram: normalizeInstagram(String(formData.get("instagram") || "")),
     submittedAt: new Date().toISOString(),
